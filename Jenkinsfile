@@ -5,13 +5,20 @@ pipeline{
             label 'AGENT-1'
         }
     }
+    environment{
+        COURSE = 'jenkins'
+    }
    
    // Build
     stages{
         stage('Build'){
             steps{
                 script{
-                    echo 'Building the application'
+                    sh """
+                        echo 'Building the application'
+                        env
+                    """
+                    
                 }
             }
         }
