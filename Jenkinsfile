@@ -29,5 +29,8 @@ pipeline{
         always { 
             echo 'I will always say Hello pipeline!'
         }
+        success { 
+            echo 'Hello pipeline is success!'
+        }
     }
 }
