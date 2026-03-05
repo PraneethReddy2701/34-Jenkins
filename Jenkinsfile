@@ -21,6 +21,7 @@ pipeline{
                     sh """
                         echo 'Building the application'
                         env
+                        sleep 10
                     """
                     
                 }
