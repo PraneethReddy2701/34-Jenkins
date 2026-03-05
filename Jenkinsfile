@@ -45,7 +45,12 @@ pipeline{
         stage('Deploy'){
             steps{
                 script{
-                    echo 'Deploying the application'
+                    input {
+                        message "Should we continue?"
+                        ok "Yes, we should."
+                        submitter "alice,bob"
+                        echo 'Deploying the application'
+                    }
                 }
             }
         }
